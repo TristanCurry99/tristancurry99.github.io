@@ -5,13 +5,58 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-wdith, initial-scale=1.0" />
     <title>Western Engineering Experience</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="westernStyle.css" />
+    <script src="westernExpScript.js" defer> </script>
 </head>
 <body>
-    <a href="index.html">
-        <img src="docs/assets/return.png" alt="return button" />
-    </a>
-    <h1>Western Master of Engineering Science Experience</h1>
-    <p>Put all my western experience and things here...</p>
+    <div class="navBar">
+        <a href="index.html">
+            <img src="docs/assets/return.png" alt="return Button" />
+        </a>
+        <a href="workExperiencePage.html">
+            <img src="docs/assets/workExperienceButton.png" alt="Work Experience Button" />
+        </a>
+        <a href="waterlooExperiencePage.html">
+            <img src="docs/assets/waterlooExperienceButton.jpg" alt="Waterloo Experience Button" />
+        </a>
+        <a href="extraCurricularExperiencePage.html">
+            <img src="docs/assets/extraCurricularsButton.jpg" alt="Extra Curricular Experience Button" />
+        </a>
+    </div>
+    <div class="header">
+        <h1>Western Master of Engineering Science Experience</h1>
+        <p>Put all my western experience and things here...</p>
+    </div>
+
+    <div class="expandable">
+        <div class="expandable__title-bar">
+            <span class="expandable__title"> Expandable Section #1</span>
+            <ion-icon class="expandable__icon" name="chevron-back"></ion-icon>
+        </div>
+        <div class="expandable__content-wrapper">
+            <div class="expandable__content">
+                <!-- Content for the expandable-->
+                <p>this is an expandable section</p>
+                <p> more content!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="expandable">
+        <div class="expandable__title-bar">
+            <ion-icon class="expandable__icon-left" name="chevron-forward"></ion-icon>
+            <span class="expandable__title"> Expandable Section #2</span>
+        </div>
+        <div class="expandable__content-wrapper">
+            <div class="expandable__content">
+                <!-- Content for the expandable-->
+                <p>this is an expandable section</p>
+                <p> more content!</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
