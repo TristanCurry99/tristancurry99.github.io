@@ -3,3 +3,31 @@ body {
     background: pink;
     text-align: center;
 }
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 14px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.gContainer {
+    display: grid;
+    grid-template-columns: 225px 225px;
+    grid-template-rows: 225px 225px;
+    gap: 20px;
+    place-content: center;
+}
+
+.gContainer > div {
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    text-align: center;
+}

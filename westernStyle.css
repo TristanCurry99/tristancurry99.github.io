@@ -1,6 +1,6 @@
 ﻿body
 {
-    background: #7a3a8a;
+    background: #7f5f9b;
 }
 .navBar {
     display: flex;
@@ -18,7 +18,7 @@
     width: 50%;
 }
 
-.header{
+.header {
     padding: 10px 60px;
     position: relative;
     width: 50%;
@@ -26,7 +26,8 @@
     margin: auto;
     margin-top: 30px;
     text-align: center;
-    background: #ffff;
+    background: #691ca5;
+    color: white;
 }
 
 .expandable {
@@ -63,15 +64,25 @@
     justify-content: space-between;
     padding: var(--xy-padding);
     user-select: none;
-    background-color: #009578;
+    background-color: #691ca5;
     color: white;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     cursor: pointer;
 }
 
+.expandable__title-bar img{
+    width: 25%;
+}
+
 .expandable__title{
     font-weight: bold;
+    font-size: 24px;
+}
 
+.gridContainer{
+    font-size:18px;
+    font-weight: normal;
+    
 }
 
 .expandable__icon{
@@ -95,5 +106,9 @@
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.3s ease-out;
+}
+
+.bookLogo{
+    
 }
 
