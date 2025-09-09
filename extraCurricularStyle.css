@@ -1,0 +1,30 @@
+﻿body {
+    background: #7f5f9b;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffff;
+    text-align: center;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    border-radius: 6px;
+}
+
+.navBar img {
+    width: 50%;
+}
+
+.header {
+    padding: 10px 60px;
+    position: relative;
+    width: 50%;
+    border-radius: 6px;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    background: #691ca5;
+    color: white;
+}
