@@ -1,5 +1,9 @@
 ﻿body {
-    background: #7f5f9b;
+    --headerStyle: "Montserrat", sans-serif;
+    --bodyTextStyle: Helvetica, Arial, sans-serif;
+    --fontColorStyle: #F9FAFB;
+    --linkColorStyle: #03cffc;
+    background: #1E293B;
 }
 
 .navBar {

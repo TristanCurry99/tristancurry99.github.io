@@ -1,7 +1,12 @@
-﻿body
-{
-    background: #7f5f9b;
+﻿body {
+    --headerStyle: "Montserrat", sans-serif;
+    --bodyTextStyle: Helvetica, Arial, sans-serif;
+    --fontColorStyle: #F9FAFB;
+    --linkColorStyle: #03cffc;
+    --fontContainerColorStyle:#000000;
+    background: #1E293B;
 }
+
 .navBar {
     display: flex;
     justify-content: space-between;
@@ -97,7 +102,7 @@
     border: 1px solid #dddddd;
     border-top: none;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .expandable__content-wrapper {
@@ -106,7 +111,20 @@
     transition: grid-template-rows 0.3s ease-out;
 }
 
-.bookLogo{
-    
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.expandImageSquare img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.expandText {
+    font-family: var(--bodyTextStyle);
+    color: var(--fontContainerColorStyle);
+}

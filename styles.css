@@ -1,6 +1,11 @@
 body {
+    --headerStyle: "Montserrat", sans-serif;
+    --bodyTextStyle: Helvetica, Arial, sans-serif;
+    --fontColorStyle: #F9FAFB;
+    --linkColorStyle: #03cffc;
+    
     margin: 0;
-    background: pink;
+    background: #1E293B;
     text-align: center;
 }
 
@@ -12,10 +17,45 @@ body {
     margin-bottom: 20px;
 }
 
+.container img {
+    width: 250px;
+    height: 300px;
+    margin-right: 20px;
+}
+
 .text {
     font-size: 14px;
     padding-left: 20px;
     text-align: left;
+    font-family: var(--bodyTextStyle);
+    color: var(--fontColorStyle);
+}
+
+.titleBox h1 {
+    font-family: var(--headerStyle);
+    font-size: 48px;
+    color: var(--fontColorStyle);
+    text-align: center;
+    justify-content: center;
+}
+
+.titleBox h2 {
+    font-family: var(--headerStyle);
+    font-size: 24px;
+    color: var(--fontColorStyle);
+    text-align: center;
+    justify-content: center;
+}
+
+.titleBox p {
+    font-family: var(--bodyTextStyle);
+    color: var(--fontColorStyle);
+    font-size: 18px;
+}
+
+.titleBox a {
+    
+    color: var(--linkColorStyle);
 }
 
 .gContainer {
@@ -24,6 +64,12 @@ body {
     grid-template-rows: 225px 225px;
     gap: 80px;
     place-content: center;
+}
+
+.gContainer h3 {
+    font-family: var(--headerStyle);
+    color: var(--fontColorStyle);
+    font-size: 18px;
 }
 
 .gContainer > div {
