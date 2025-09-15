@@ -4,8 +4,10 @@ document.body.addEventListener("click", (ev) => {
 
     if (!isExpandableTitle) {
         return;
+    } else {
+        expandable.classList.toggle("expandable--open");
     }
-    expandable.classList.toggle("expandable--open");
+    
 
 });
 

@@ -57,18 +57,22 @@
         <div class="expandable__content-wrapper">
             <div class="expandable__content">
                 <!-- Content for the expandable-->
+                <p>Current prostate cancer detection methods can be costly to obtain, such as magnetic resonance imaging, or lack specificity, such as a digital rectal exam. Ultrasound elastography, a method that can be used to develop and test algorithms that output stiffness, strain, and displacement data captured by ultrasound radio frequency readings, offers a potential solution to these challenges. An initial algorithm utilizing dynamic programming and analytic minimization estimates the radial and angular displacements from a pre- and post-compression data set to determine the required material properties. This estimate of displacements is then refined through an algorithm where incompressibility, Laplacian smoothing, and strain compatibility are enforced. The refined displacement field can generate a strain image of the prostate. Material properties such as Young’s modulus, Poisson’s ratio, and shear modulus can be iteratively reconstructed using finite element analysis to enhance the output images further. The material property calculation process, known for its accuracy, yields informative results to clinicians when diagnosing prostate malignancies. </p>
+                <a href="https://uwo.scholaris.ca/items/0873a4b2-1992-4212-b3b9-1f3eb417b958" target="_blank"> Link to Full text.</a>
                 <div class="content">
                     <div class="expandImage">
                         <img src="docs/assets/scattererMap.png" alt="Image of a scatterer map for a prostate" />
                     </div>
                     <div class="expandText">
-                        <p> this is some text explaining the image.</p>
+                        <h1> <em>In Silico Data for Validation</em></h1>
+                        <p> To Verify any algorithms against known deformations, an <em>In Silico</em> data set was created using MATLAB, field-ii ultrasound simulations, MRI Images of an mimicking phantom, and Finite Element modelling of the prostate capsule to collect realistic displacements of the tissue. The scatterer map seen in the left shows the pre-compression state of the prostate capsule, simulated with 1 million data points. This map is then "scanned" using field-ii's simulated ultrasound scanner to produce radio frequency data that is useable in the displacement calculation algorithms.'</p>
                     </div>
                 </div>
 
                 <div class="content">
                     <div class="expandText">
-                        <p> this is some text explaining the image.</p>
+                        <h1> FE Displacement Tracking</h1>
+                        <p> The angular and radial displacements applied to the <em>In Silico</em> data are calculated through Abaqus FEA software. Where a simulated prostate was created in a background material, and a displacement of 1mm was applied to the prostate using a rounded probe. The resulting displacements and strains were extracted and stored to be compared against for the results from the tissue tracking algorithms. The image to the right shows the angular displacement from Abaqus, showing the displacement occurs laterally stemming from the center line, where tissue to the left displaces positively, and tissue to the right displaces negatively, which is expected for angular displacements. </p>
                     </div>
                     <div class="expandImage">
                         <img src="docs/assets/angDispFEA.png" alt="Image of a FEA Map showing angular displacements." />
@@ -80,13 +84,15 @@
                         <img src="docs/assets/TMPImage.png" alt="Image of a tissue mimicking phantom used for data collection." />
                     </div>
                     <div class="expandText">
-                        <p> this is some text explaining the image.</p>
+                        <h1> Tissue Mimicking Phantom </h1>
+                        <p> In addition to the <em>In Silico</em> data, a Tissue Mimicking Phantom (TMP) was created using gelatin, fine glass beads as an aggregate, and a saline soaked reticulated foam ball to act as the prostate. The TMP was able to be scanned using an ULTRASONIX Ultrasound machine, to allow for real RF data to be collected for use in the Tissue Tracking Algorithms. This TMP included a hole to allow for direct side contact between the Ultrasound probe and the wall between the hole and prostate capsule, simulating a real TRUS procedure. The result of this TMP can be seen in the image to the left.</p>
                     </div>
                 </div>
 
                 <div class="content">
                     <div class="expandText">
-                        <p> this is some text explaining the image.</p>
+                        <h1> AM2D and STREAL Polar Displacement Tracking</h1>
+                        <p> My first contribution to the project is the update to AM2D (analytic Minimization in 2D) for non-linear probes, such as Transrectal Ultrasound probes that are used for imaging the prostate. AM2D provides an estimate for displacements in the radial and angular direction, and can be refined further by implementing STREAL(The strain refinement algorithm) which takes into account the Boussinesq equation for semi-infinite mediums, and biomechanical properties of human organ tissue. Once the alterations to the algorithm were made and the pre-compression and post compression radio frequency data sets are available, they will be initially processed by AM2D, an initial estimate for the displacements in the radial and angular directions. The image on the right shows an example output of AM2D and refinement from STREAL for the radial direction. This shows the high compression at the bottom, where the probe is directly contacting, and trending to 0 displacement towards the top, as is expected over the range of imaging. The strain image seen in gray, begins to show the simulated prostate capsule in the light gray area towards the bottom of the image.</p>
                     </div>
                     <div class="expandImage">
                         <img src="docs/assets/TMPSTREAL.png" alt="Image of displacement and strain maps for the strain refinement algorithm STREAL." />
@@ -98,7 +104,8 @@
                         <img src="docs/assets/TMPPoissonsReconstruction.png" alt="Image of Poissons ratio and Stiffness reconstruction for the TMP data." />
                     </div>
                     <div class="expandText">
-                        <p> this is some text explaining the image.</p>
+                        <h1> Poisson's Ratio Reconstruction</h1>
+                        <p> Once displacements and strains have been calculated using AM2D and refined using STREAL's biomechanical enforcements, additional material properties can be calculated using an interative Finite Element method, where the strain within the tissue is calculated and compared against known displacement mappings, allowing for stiffness and Poisson's ratio to be calculated. The stiffness of the tissue is used to determine if malignancies are present within the tissue, while Poisson's ratio can be used to determine the level of binding between the inclusion and the surrounding tissue, giving insights on if the inclusion is bengign or malignant.</p>
                     </div>
                 </div>
 
@@ -111,8 +118,8 @@
             <ion-icon class="expandable__icon-left" name="chevron-forward"></ion-icon>
             <img src="docs/assets/courseWorkLogo.png" alt="Person sitting at desk Infographic" />
             <div class="gridContainer">
-                <span class="expandable__title"> Graduate Coursework </span>
-                <p> Courses focused on the development of speicalized engineering skills.</p>
+                <span class="expandable__title"> My Graduate Coursework </span>
+                <p> Courses focused on my development of speicalized engineering skills.</p>
             </div>
             
         </div>
@@ -124,13 +131,15 @@
                         <img src="docs/assets/biomechanicsLogo.png" alt="Biomechanics Logo" />
                     </div>
                     <div class="expandText">
-                        <p> this is some text explaining the image.</p>
+                        <h1> BME 9529 Human and Animal Biomechanics</h1>
+                        <p>This course focuses on the human mechanical aspects of biology and biophysics. It is geared toward learning the true mechanical behaviour of tissues, organs and some human body systems, and to recognize these qualities when making assumptions, predicting behaviour and solving problems. To complement the basic mechanics laws and analytical solutions presented in the course, FEM is introduced and some of its applications in biomedicine are discussed. The objectives, through assignments, lectures and tutorials, are to demonstrate the basic laws of mechanics, the development of internal stresses in tissues under external load – to develop skills in integrating the concepts in mechanics for interpreting the behaviour of tissues and anatomical structures. Another objective is to provide exposure to more advanced tools such as FEM software (ABAQUS) to solve complex biomechanics problems. </p>
                     </div>
                 </div>
 
                 <div class="content">
                     <div class="expandText">
-                        <p> this is some text explaining the image.</p>
+                        <h1> BME 9513 Introduction to Medical Imaging</h1>
+                        <p> This introductory course in medical imaging provides a foundation in the physics underlying key diagnostic techniques: ultrasound, X-ray, computed tomography (CT), and magnetic resonance imaging (MRI). Students begin with ultrasound, exploring how high-frequency sound waves interact with tissues to create real-time images based on reflection and scattering. The course then covers X-rays, focusing on electromagnetic radiation, attenuation, and contrast generation in radiographic imaging. Building on this, CT imaging is introduced, highlighting how multiple X-ray projections are reconstructed into detailed cross-sectional views using advanced computational methods. Finally, MRI principles are examined, including nuclear magnetic resonance, the role of strong magnetic fields and radiofrequency pulses, and how tissue properties such as relaxation times contribute to image contrast. Emphasis is placed on the fundamental physics that enables image formation, as well as the advantages and limitations of each modality. This course serves as a gateway for further study in biomedical engineering, radiology, and applied medical sciences.</p>
                     </div>
                     <div class="expandImage">
                         <img src="docs/assets/medicalImagingLogo.png" alt="Medical Imaging Logo" />
@@ -142,13 +151,15 @@
                         <img src="docs/assets/DataForecastingLogo.png" alt="Data Forecasting Logo" />
                     </div>
                     <div class="expandText">
-                        <p> this is some text explaining the image.</p>
+                        <h1> ECE 9603 Data Forecasting Fundamentals</h1>
+                        <p> In recent years, developments in the Web, social media, IoT, sensors, and mobile devices have resulted in the ability to collect more data than ever. This course focuses on approaches and techniques for extracting value from such massive data through data analytics. Various forecasting approaches (such as moving averages, support vector regression, neural networks) and recommender systems will be covered. The emphasis will be on solving real world problems using those techniques. Deep learning will be explored because it can learn complex non-linear relationships commonly present in Big Data, capture various levels of abstraction, and learn good features from data. Challenges of data analytics with large data sets will be explored and emerging techniques for addressing those challenges will be discussed. Students are required to develop a project which provides an opportunity to explore in more detail an area of data analytics and experience some of the challenges that they may face in their future work/research activities.</p>
                     </div>
                 </div>
 
                 <div class="content">
                     <div class="expandText">
-                        <p> this is some text explaining the image.</p>
+                        <h1> ECE 9202 Advanced Image Processing</h1>
+                        <p> This advanced image processing course explores modern machine learning techniques, with a strong emphasis on convolutional neural networks (CNNs) and their applications in computer vision. Students study the architecture and mechanics of CNNs, including convolution, pooling, and feature extraction, to understand how deep models learn hierarchical image representations. Beyond CNNs, the course covers advanced methods such as transfer learning, recurrent networks for sequential imaging tasks, and generative models for image synthesis and enhancement. Practical assignments focus on medical imaging, object recognition, and image segmentation, equipping students with the skills to apply machine learning to complex real-world image analysis challenges.</p>
                     </div>
                     <div class="expandImageSquare">
                         <img src="docs/assets/imageProcessingLogo.png" alt="Image Processing Logo" />

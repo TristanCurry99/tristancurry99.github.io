@@ -3,6 +3,7 @@
     --bodyTextStyle: Helvetica, Arial, sans-serif;
     --fontColorStyle: #F9FAFB;
     --linkColorStyle: #03cffc;
+    --headerBackgroundColor: #ee6c4d;
     background: #1E293B;
 }
 
@@ -29,7 +30,7 @@
     margin: auto;
     margin-top: 30px;
     text-align: center;
-    background: #691ca5;
+    background: var(--headerBackgroundColor);
     color: white;
 }
 
@@ -53,7 +54,7 @@
     --xy-padding: 14px;
     --border-radius: 6px;
     --transitionms: 300ms;
-    max-width: 400px;
+    max-width: 800px;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -78,7 +79,7 @@
     justify-content: space-between;
     padding: var(--xy-padding);
     user-select: none;
-    background-color: #691ca5;
+    background-color: var(--headerBackgroundColor);
     color: white;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     cursor: pointer;

@@ -3,6 +3,7 @@
     --bodyTextStyle: Helvetica, Arial, sans-serif;
     --fontColorStyle: #F9FAFB;
     --linkColorStyle: #03cffc;
+    --infoTextSize: 18px;
     background: #1E293B;
 }
 
@@ -29,6 +30,46 @@
     margin: auto;
     margin-top: 30px;
     text-align: center;
-    background: #691ca5;
+    background: #ee6c4d;
     color: white;
+}
+
+.headerImage {
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.infoText {
+    display: flex;
+    background: white;
+    font-size: var(--infoTextSize);
+    justify-content: center;
+    text-align: center;
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contentContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.contentText {
+    background: white;
+    font-size: var(--infoTextSize);
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contentImage {
+    margin-top: 150px;
+    text-align: center;
+    justify-content: center;
+    width: 85%;
 }

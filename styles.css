@@ -3,7 +3,9 @@ body {
     --bodyTextStyle: Helvetica, Arial, sans-serif;
     --fontColorStyle: #F9FAFB;
     --linkColorStyle: #03cffc;
-    
+    --bodyTextSize: 14px;
+    --headerBackgroundColor: #ee6c4d;
+
     margin: 0;
     background: #1E293B;
     text-align: center;
@@ -20,15 +22,49 @@ body {
 .container img {
     width: 250px;
     height: 300px;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left:100px;
+}
+
+.headerBox {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    background: var(--headerBackgroundColor);
+    border-radius: 12px;
+}
+
+.headerText {
+    font-family: var(--headerStyle);
+    font-size: var(--bodyTextSize);
+    padding: 10px;
 }
 
 .text {
-    font-size: 14px;
-    padding-left: 20px;
-    text-align: left;
+    font-size: var(--bodyTextSize);
+    margin-left: auto;
+    margin-right: auto;
     font-family: var(--bodyTextStyle);
-    color: var(--fontColorStyle);
+    border-radius: 12px;
+    width: 75%;
+    background-color: white;
+}
+
+.image {
+    height: 300px;
+    width: 250px;
+    margin-left: 10px;
+}
+
+.titleBox {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
 }
 
 .titleBox h1 {
@@ -49,13 +85,20 @@ body {
 
 .titleBox p {
     font-family: var(--bodyTextStyle);
-    color: var(--fontColorStyle);
     font-size: 18px;
 }
 
 .titleBox a {
-    
     color: var(--linkColorStyle);
+}
+
+.text h4 {
+    font-family: var(--headerStyle);
+    color: var(--fontColorStyle);
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .gContainer {
@@ -64,6 +107,7 @@ body {
     grid-template-rows: 225px 225px;
     gap: 80px;
     place-content: center;
+    margin-bottom: 40px;
 }
 
 .gContainer h3 {
