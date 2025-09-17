@@ -6,13 +6,13 @@
 }
 
 body {
-    background: #1E293B
+    background-image: linear-gradient(to bottom, #1E293B, #a9d4ff);
 }
 
 .navBar {
     display: flex;
     justify-content: space-between;
-    background-color: #ffff;
+    background: white;
     text-align: center;
     width: 50%;
     position: relative;
@@ -40,7 +40,7 @@ body {
     margin: auto;
     margin-top: 30px;
     text-align: center;
-    background: #ffff;
+    background: linear-gradient(to right, #ee6c4d, #f07f64);
     color: black;
 }
 

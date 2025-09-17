@@ -3,8 +3,8 @@
     --bodyTextStyle: Helvetica, Arial, sans-serif;
     --fontColorStyle: #F9FAFB;
     --linkColorStyle: #03cffc;
-    --headerBackgroundColor: #ee6c4d;
-    background: #1E293B;
+    --headerBackgroundColor: linear-gradient(to right, #ee6c4d, #f07f64);
+    background-image: linear-gradient(to bottom, #1E293B, #a9d4ff);
 }
 
 .navBar {
@@ -79,7 +79,7 @@
     justify-content: space-between;
     padding: var(--xy-padding);
     user-select: none;
-    background-color: var(--headerBackgroundColor);
+    background: var(--headerBackgroundColor);
     color: white;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     cursor: pointer;
